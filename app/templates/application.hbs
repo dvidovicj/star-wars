@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="application">
+  <GameArea
+    @gameType={{this.gameType}}
+    @playerOne={{this.playerOne}}
+    @playerTwo={{this.playerTwo}}
+    @lastWonRound={{this.lastWonRound}}
+    @playerOneScore={{this.playerOneScore}}
+    @playerTwoScore={{this.playerTwoScore}}
+    @startGame={{this.startGame}}
+  />
+</div>
