@@ -1,0 +1,36 @@
+<div class="game-area" ...attributes>
+  <div class="game-area__field" data-test-game-area-field="">
+    {{#if @playerOne}}
+      <GamePlayer
+        @player={{@playerOne}}
+        @gameType={{@gameType}}
+      />
+      <GamePlayer
+        @player={{@playerTwo}}
+        @gameType={{@gameType}}
+      />
+    {{else}}
+      Battle's gonna start soon!
+    {{/if}}
+  </div>
+
+  <div class="game-area__score">
+    <div class="game-area__score-wrapper">
+      {{#if (eq @lastWonRound "1")}}
+        <div class="game-area__score-emoji" data-test-game-area-player-one-emoji="">🎉</div>
+      {{/if}}
+      <div class="game-area__score-label" data-test-game-area-player-one-score="">{{@playerOneScore}}</div>
+    </div>
+    <div class="game-area__score-wrapper">
+      {{#if (eq @lastWonRound "2")}}
+        <div class="game-area__score-emoji" data-test-game-area-player-two-emoji="">🎉</div>
+      {{/if}}
+      <div class="game-area__score-label" data-test-game-area-player-two-score="">{{@playerTwoScore}}</div>
+    </div>
+  </div>
+
+  <div class="game-area__actions">
+    <button class="game-area__action" {{on "click" (fn @startGame "person")}} data-test-game-area-start-game-person-button="" >Person battle</button>
+    <button class="game-area__action" {{on "click" (fn @startGame "starship")}} data-test-game-area-start-game-starship-button="" >Starship battle</button>
+  </div>
+</div>
