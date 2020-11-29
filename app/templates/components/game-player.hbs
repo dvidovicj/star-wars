@@ -1,0 +1,29 @@
+<div class="game-player" ...attributes>
+  <div class="game-player__title">
+    {{@player.name}}
+  </div>
+
+  <div class="game-player__label">
+    {{#if (eq @gameType "person")}}
+      Height: <span class="game-player__value">{{@player.height}}</span>
+    {{else}}
+      Crew: <span class="game-player__value is-important" data-test-game-player-starship-strength="">{{@player.crew}}</span>
+    {{/if}}
+  </div>
+
+  <div class="game-player__label">
+    {{#if (eq @gameType "person")}}
+      Mass: <span class="game-player__value is-important" data-test-game-player-person-strength="">{{@player.mass}}</span>
+    {{else}}
+      Passengers: <span class="game-player__value">{{@player.passengers}}</span>
+    {{/if}}
+  </div>
+
+  <div class="game-player__label">
+    {{#if (eq @gameType "person")}}
+      Gender: <span class="game-player__value">{{@player.gender}}</span>
+    {{else}}
+      Length: <span class="game-player__value">{{@player.length}}</span>
+    {{/if}}
+  </div>
+</div>
