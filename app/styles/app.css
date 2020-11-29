@@ -1,0 +1,97 @@
+.application {
+  max-width: 1200px;
+}
+
+.game-area__field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 376px;
+}
+
+.game-area__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.game-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 256px;
+}
+
+.game-player__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.game-player__label {
+  font-size: 14px;
+  color: darkslategray;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.game-player__value {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.game-area__action {
+  padding: 16px;
+  border-radius: 4px;
+  background-color: darkslategray;
+  color: whitesmoke;
+}
+
+.game-area__action:hover {
+  cursor: pointer;
+}
+
+.game-area__action:focus {
+  outline: 0;
+}
+
+.game-area__action:last-child {
+  margin-left: 32px;
+}
+
+.game-player:last-child {
+  margin-left: 192px;
+}
+
+.game-area__score-wrapper {
+  min-height: 64px;
+  min-width: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.game-area__score {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.game-area__score-label {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.game-area__score-wrapper:last-child {
+  margin-left: 108px;
+}
+
+.game-player__value.is-important {
+  font-size: 20px;
+  font-weight: bold;
+  color: crimson;
+}
